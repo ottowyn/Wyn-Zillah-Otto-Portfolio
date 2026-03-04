@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+            <p>Play against the computer</p>
+        </header>
+
+        <div class="game-board">
+            <div class="score-board">
+                <div class="score">
+                    <span class="label">Player</span>
+                    <span class="points" id="playerScore">0</span>
+                </div>
+                <div class="score">
+                    <span class="label">Computer</span>
+                    <span class="points" id="computerScore">0</span>
+                </div>
+            </div>
+
+            <div class="result" id="result">
+                <p>Choose your move!</p>
+            </div>
+
+            <div class="choices">
+                <button class="choice-btn" data-choice="rock">
+                    <i class="bx bx-cube"></i>
+                    <span>Rock</span>
+                </button>
+                <button class="choice-btn" data-choice="paper">
+                    <i class="bx bx-file"></i>
+                    <span>Paper</span>
+                </button>
+                <button class="choice-btn" data-choice="scissors">
+                    <i class="bx bx-cut"></i>
+                    <span>Scissors</span>
+                </button>
+            </div>
+
+            <div class="game-info">
+                <div class="player-move">
+                    <h3>Your Move</h3>
+                    <div class="move-display" id="playerMove">--</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="computer-move">
+                    <h3>Computer Move</h3>
+                    <div class="move-display" id="computerMove">--</div>
+                </div>
+            </div>
+
+            <button class="reset-btn" onclick="resetGame()">
+                <i class="bx bx-reset"></i> Reset Game
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
